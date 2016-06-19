@@ -8,4 +8,9 @@ class WelcomeController < ApplicationController
     render "bio"
   end
 
+  def previous_work
+    render "previous_work"
+  end
+
+
 end
