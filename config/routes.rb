@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/bio' => 'welcome#bio'
   get '/previous-work' => 'welcome#previous_work'
+  get '/contact' => 'welcome#contact'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

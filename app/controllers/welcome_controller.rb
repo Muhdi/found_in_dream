@@ -12,5 +12,8 @@ class WelcomeController < ApplicationController
     render "previous_work"
   end
 
-
+  def contact
+    render "contact"
+  end
+  
 end
