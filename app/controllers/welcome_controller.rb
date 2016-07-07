@@ -4,16 +4,16 @@ class WelcomeController < ApplicationController
     render "index"
   end
 
-  def bio
-    render "bio"
+  def about
+    render "about"
   end
 
-  def previous_work
-    render "previous_work"
+  def cast
+    render "cast"
   end
 
   def contact
     render "contact"
   end
-  
+
 end

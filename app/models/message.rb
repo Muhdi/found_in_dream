@@ -1,4 +1,4 @@
-class Message < ActiveRecord::Base
+class Message 
   attr_accessor :name, :email, :message
 
   def initialize(name, email, message)
