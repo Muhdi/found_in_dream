@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about'
   get '/cast' => 'welcome#cast'
   get '/screening' => 'welcome#screening'
+
   get '/contact' => 'welcome#contact'
+  post '/contact' => 'contacts#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
