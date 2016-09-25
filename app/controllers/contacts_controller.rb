@@ -1,7 +1,12 @@
 class ContactsController < ApplicationController
 
   def create
-    ContactMailer.send_contact_email(email_params).deliver!
+    testm = Message.new(email_params)
+    if testm.valid?
+      ContactMailer.send_contact_email(email_params).deliver!
+    else
+      flash[:error] = "Please correct the form"
+    end
     redirect_to controller: 'welcome', action: 'contact'
   end
 
