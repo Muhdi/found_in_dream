@@ -1,11 +1,15 @@
 class ContactMailer < ApplicationMailer
 
-  default :from => 'any_from_address@example.com'
+  default :to => 'jemaltp@gmail.com'
 
- # send a signup email to the user, pass in the user object that   contains the user's email address
- def send_contact_email
-   mail( :to => "jemaltp@gmail.com",
-   :subject => 'Thanks for contacting us' )
+ def send_contact_email(email_info)
+   email_with_name = %("#{email_info[:name]}" <#{email_info[:email]}>)
+   mail({
+     :to => "jemaltp@gmail.com",
+     :from => email_with_name,
+     :subject => 'Contact from website',
+     :body => email_info[:message]
+     })
  end
 
 end
